@@ -16,7 +16,9 @@ header {
 nav {
   background: #555;
   padding: 10px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 nav a {
