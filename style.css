@@ -34,9 +34,10 @@ nav a:hover {
 /* Sections */
 section {
   padding: 20px;
-  margin: 10px;
+  margin: 20px auto;
   background: white;
   border-radius: 10px;
+  width: 80%;
   transition: 0.3s;
 }
 
