@@ -16,6 +16,10 @@ header {
   padding: 20px;
 }
 
+header {
+  animation: fadeIn 1s ease-in;
+}
+
 /* Navigation */
 nav {
   background: #555;
