@@ -64,3 +64,23 @@ footer {
   background: #333;
   color: white;
 }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #0077b6;
+  color: white;
+}
+
+img {
+  border-radius: 50%;
+  margin-top: 10px;
+}
