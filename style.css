@@ -139,3 +139,9 @@ img {
   }
 
 }
+
+@media (max-width: 768px) {
+  section {
+    margin: 10px;
+  }
+}
