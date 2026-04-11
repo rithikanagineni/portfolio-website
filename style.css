@@ -30,6 +30,11 @@ nav a:hover {
   color: yellow;
 }
 
+section:hover {
+  transform: scale(1.02);
+  transition: 0.3s;
+}
+
 /* Sections */
 section {
   padding: 20px;
