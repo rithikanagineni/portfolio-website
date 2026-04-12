@@ -5,84 +5,107 @@
   <link rel="stylesheet" href="style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header>
-    <h1>Rithika N</h1>
-    <p>Full Stack Developer</p>
-  </header>
+<header>
+  <h1>Rithika N</h1>
+  <h2>Full Stack Developer | Problem Solver</h2>
+  <p>Full Stack Developer</p>
+</header>
 
-  <!-- Navigation -->
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+  <a href="#home">Home</a>
+  <a href="#about">About</a>
+  <a href="#skills">Skills</a>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <button onclick="toggleDarkMode()">🌙</button>
+</nav>
 
-  <!-- Home Section -->
-  <section id="home">
-    <h2>Home</h2>
-    <p>Welcome to my portfolio website 🚀</p>
-    <button onclick="showMessage()">Click Me</button>
-    <img src="profile.jpg" alt="My Photo" width="150">
-  </section>
+<!-- HOME -->
+<section id="home" class="hidden">
+  <h1 id="typing"></h1>
+  <p>Welcome to my professional portfolio 🚀</p>
+  <img src="profile.jpg" width="150"><br><br>
+  <a href="resume.pdf" download><button>Download Resume</button></a>
+  <p>I build real-world full stack applications.</p>
+</section>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am Rithika, a BSc IT student learning full stack development.</p>
-  </section>
+<!-- ABOUT -->
+<section id="about" class="hidden">
+  <h2>About Me</h2>
+  <p>I am a BSc IT student passionate about full stack development.</p>
+</section>
 
-  <!-- Projects Section -->
-  <section id="projects">
+<!-- SKILLS -->
+<section id="skills" class="hidden">
+  <h2>Skills</h2>
+
+  <p>HTML</p>
+  <div class="bar"><div class="progress" style="width:90%"></div></div>
+
+  <p>CSS</p>
+  <div class="bar"><div class="progress" style="width:85%"></div></div>
+
+  <p>JavaScript</p>
+  <div class="bar"><div class="progress" style="width:80%"></div></div>
+
+  <p>Python</p>
+  <div class="bar"><div class="progress" style="width:75%"></div></div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="hidden">
   <h2>Projects</h2>
 
-  <div class="project-container">
-    <div class="project-card">
-      <h3>Portfolio Website</h3>
-      <p>HTML, CSS, JS</p>
-    </div>
+  <div class="filter-buttons">
+    <button onclick="filterProjects('all')">All</button>
+    <button onclick="filterProjects('web')">Web</button>
+    <button onclick="filterProjects('ai')">AI</button>
+    <button onclick="filterProjects('iot')">IoT</button>
+  </div>
 
-    <div class="project-card">
-      <h3>MoodMate</h3>
-      <p>AI, Keras</p>
-    </div>
-
-    <div class="project-card">
-  <h3>Language Learning App</h3>
-  <p>Full Stack</p>
+  <div class="project-card web">
+  <h3>Portfolio Website</h3>
+  <p>Full stack portfolio with contact system</p>
+  <a href="https://github.com/rithikanagineni">GitHub</a>
 </div>
 
-    <div class="project-card">
-      <h3>Air Quality System</h3>
-      <p>IoT</p>
-    </div>
+  <div class="project-card ai">
+    <h3>MoodMate</h3>
+    <p>Emotion detection using AI</p>
   </div>
+
+  <div class="project-card iot">
+    <h3>Air Quality Monitoring</h3>
+    <p>IoT system</p>
+  </div>
+
 </section>
 
-  <!-- Contact Section -->
-  <section id="contact">
+<!-- CONTACT -->
+<section id="contact" class="hidden">
   <h2>Contact</h2>
 
-  <form onsubmit="return validateForm()">
-    <input type="text" id="name" placeholder="Enter your name" required><br><br>
+  <p id="success-msg" style="color:green;"></p>
 
-    <input type="email" id="email" placeholder="Enter your email" required><br><br>
-
-    <textarea id="message" placeholder="Enter your message" rows="4" required></textarea><br><br>
-
-    <button type="submit">Submit</button>
+  <form action="contact.php" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required><br><br>
+    <input type="email" name="email" placeholder="Your Email" required><br><br>
+    <textarea name="message" placeholder="Your Message" required></textarea><br><br>
+    <button type="submit">Send Message</button>
   </form>
-
 </section>
-  
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Rithika</p>
-  </footer>
 
-  <script src="script.js"></script>
+<footer>
+  <p>© 2026 Rithika</p>
+  <p>
+    <a href="https://github.com/rithikanagineni">GitHub</a>
+    <a href="www.linkedin.com/in/rithika-nagineni-816858359">LinkedIn</a>
+  </p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
