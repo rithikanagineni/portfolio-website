@@ -1,19 +1,45 @@
-function showMessage() {
-  alert("Welcome to Rithika's Portfolio 🚀");
+// Dark mode
+function toggleDarkMode() {
+  document.body.classList.toggle("dark-mode");
 }
 
-function validateForm() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let message = document.getElementById("message").value;
+// Typing effect
+let text = "Hi, I'm Rithika 👩‍💻";
+let index = 0;
 
-  if (name === "" || email === "" || message === "") {
-    alert("Please fill all fields");
-    return false;
+function typeEffect() {
+  if (index < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(index);
+    index++;
+    setTimeout(typeEffect, 100);
   }
+}
+window.onload = typeEffect;
 
-  alert("Form submitted successfully!");
-  return true;
+// Success message
+const params = new URLSearchParams(window.location.search);
+if (params.get("success")) {
+  document.getElementById("success-msg").innerText = "Message sent successfully!";
 }
 
-console.log("Portfolio loaded successfully");
+// Project filter
+function filterProjects(category) {
+  let cards = document.querySelectorAll(".project-card");
+
+  cards.forEach(card => {
+    if (category === "all" || card.classList.contains(category)) {
+      card.style.display = "block";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// Scroll animation
+window.addEventListener("scroll", () => {
+  document.querySelectorAll("section").forEach(el => {
+    if (el.getBoundingClientRect().top < window.innerHeight - 100) {
+      el.classList.add("show");
+    }
+  });
+});
