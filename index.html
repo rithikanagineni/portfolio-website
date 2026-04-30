@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rithika's Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><span id="typing"></span></h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle">🌙 Toggle Dark Mode</button>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-container">
+      <img src="profile.jpg" alt="Rithika's Profile Picture" class="profile-pic">
+      <div class="about-text">
+        <p>Hello! I'm Rithika, a web developer currently learning full stack development with PHP & MySQL.</p>
+        <p>I enjoy building interactive websites and am passionate about learning new technologies to grow as a developer.</p>
+        <a href="resume.pdf" download class="resume-btn">📄 Download Resume</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <!-- Technical Skills -->
+      <div class="skill"><h3>Artificial Intelligence (AI)</h3><div class="progress"><div class="progress-bar">85%</div></div></div>
+      <div class="skill"><h3>Machine Learning (ML)</h3><div class="progress"><div class="progress-bar">80%</div></div></div>
+      <div class="skill"><h3>Web Development</h3><div class="progress"><div class="progress-bar">90%</div></div></div>
+      <div class="skill"><h3>Prompt Engineering</h3><div class="progress"><div class="progress-bar">75%</div></div></div>
+      <div class="skill"><h3>Test Engineering</h3><div class="progress"><div class="progress-bar">70%</div></div></div>
+
+      <!-- Other Skills -->
+      <div class="skill"><h3>Communication Skills</h3><div class="progress"><div class="progress-bar">95%</div></div></div>
+      <div class="skill"><h3>Leadership Skills</h3><div class="progress"><div class="progress-bar">85%</div></div></div>
+
+      <!-- Programming Languages -->
+      <div class="skill"><h3>Python</h3><div class="progress"><div class="progress-bar">90%</div></div></div>
+      <div class="skill"><h3>C</h3><div class="progress"><div class="progress-bar">80%</div></div></div>
+      <div class="skill"><h3>C++</h3><div class="progress"><div class="progress-bar">75%</div></div></div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>My Projects</h2>
+    <p>I have completed 18 projects, including 8 real-time projects. Here are some highlights:</p>
+
+    <div class="filter-buttons">
+      <button data-filter="all">All</button>
+      <button data-filter="frontend">Frontend</button>
+      <button data-filter="backend">Backend</button>
+      <button data-filter="fullstack">Full Stack</button>
+    </div>
+
+    <div class="projects-container">
+      <div class="project-card" data-category="fullstack">
+        <h3>EduTrack</h3>
+        <p>Education tracking platform with analytics and student progress monitoring.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="fullstack">
+        <h3>NexHire</h3>
+        <p>Recruitment management system streamlining job applications and candidate tracking.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="fullstack">
+        <h3>Medicare</h3>
+        <p>Healthcare management solution for patient records and appointment scheduling.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="backend">
+        <h3>TaskFlow</h3>
+        <p>Task management app with CRUD operations and team collaboration features.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <div class="project-card" data-category="ai">
+        <h3>ClarityAI</h3>
+        <p>AI-driven project for insights and predictions using machine learning models.</p>
+        <a href="#">View Project</a>
+      </div>
+
+      <!-- Link to Projects Summary -->
+      <div class="project-card" data-category="fullstack">
+        <h3>Other Projects</h3>
+        <p>Completed 13 additional projects, including 8 real-time implementations.</p>
+        <a href="allproject.html">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <footer id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" action="contact.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </footer>
+
+  <button id="backToTop">↑ Back to Top</button>
+  <script src="script.js"></script>
+</body>
+</html>

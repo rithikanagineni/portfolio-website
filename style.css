@@ -1,0 +1,262 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+section, footer {
+  padding: 80px 20px;
+}
+
+/* About Section */
+#about {
+  background: #f9f9f9;          /* subtle background */
+  border-radius: 10px;
+  padding: 40px 20px;
+  margin-top: 80px;             /* extra space below header */
+}
+
+.about-container {
+  display: flex;
+  align-items: center;          /* center image and text vertically */
+  justify-content: center;
+  gap: 50px;                    /* more space between image and text */
+  flex-wrap: wrap;              /* allow wrapping on smaller screens */
+}
+
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid #007BFF;
+  object-fit: cover;
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+}
+
+#about h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#about h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #007BFF;
+  margin: 10px auto 0;
+}
+
+
+/* Skills Section */
+.skills-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.skill {
+  margin-bottom: 20px;
+}
+
+.progress {
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: #007BFF;
+  color: white;
+  padding: 5px;
+  text-align: right;
+  border-radius: 20px;
+  width: 0; /* start at 0 for animation */
+}
+
+/* Projects Section */
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 280px;
+  margin: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.filter-buttons {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-buttons button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Contact Form */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.resume-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.resume-btn:hover {
+  background: #218838;
+}
+
+/* Back to Top */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: none;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background: #121212;
+  color: #f4f4f4;
+}
+
+body.dark-mode header {
+  background: #222;
+}
+
+body.dark-mode .project-card {
+  background: #1e1e1e;
+  color: #f4f4f4;
+}
+
+/* Typing Animation */
+#typing {
+  border-right: 2px solid #007BFF;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .about-container {
+  flex-direction: column;
+  text-align: center;
+}
+
+.about-text {
+  max-width: 100%;
+  padding: 0 15px;
+}
+
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+  }
+}
+
