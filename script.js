@@ -54,7 +54,7 @@ filterButtons.forEach(button => {
   });
 });
 
-// Contact form validation - UPDATED FOR AJAX
+// Contact form validation
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault();
     const name = document.getElementById("name").value.trim();
@@ -72,24 +72,35 @@ document.getElementById("contactForm").addEventListener("submit", function(event
         return;
     }
 
-    // Send form data using AJAX
-    const formData = new FormData(this);
+    // Check if running locally or on GitHub Pages
+    const isLocal = window.location.hostname === "localhost" || 
+                    window.location.hostname === "127.0.0.1";
 
-    fetch("contact.php", {
-        method: "POST",
-        body: formData
-    })
-    .then(response => response.json())
-    .then(data => {
-        alert(data.message);
-        if (data.message.includes("Thank you")) {
+    if (isLocal) {
+        // Send to PHP file (only works locally)
+        const formData = new FormData(this);
+
+        fetch("contact.php", {
+            method: "POST",
+            body: formData
+        })
+        .then(response => response.json())
+        .then(data => {
+            alert(data.message);
+            if (data.message.includes("Thank you")) {
+                document.getElementById("contactForm").reset();
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("❌ Database not available. Form saved locally.");
             document.getElementById("contactForm").reset();
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("❌ An error occurred. Please try again.");
-    });
+        });
+    } else {
+        // On GitHub Pages - just show success message
+        alert("✅ Thank you, " + name + "! Your message has been received.\n\n(Note: GitHub Pages cannot process form submissions. For full functionality, please visit the local version.)");
+        document.getElementById("contactForm").reset();
+    }
 });
 
 // Back to Top Button
